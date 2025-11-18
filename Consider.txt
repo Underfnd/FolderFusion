@@ -1,1 +1,87 @@
+# Programming Languages
 .cs
+.java
+.py
+.js
+.ts
+.cpp
+.c
+.h
+.hpp
+.php
+.rb
+.go
+.rs
+.swift
+.kt
+.scala
+.dart
+.r
+.m
+.pl
+.lua
+.sh
+.bat
+.ps1
+
+# Web Technologies
+.html
+.htm
+.css
+.scss
+.sass
+.less
+.xml
+.json
+.yaml
+.yml
+.md
+.markdown
+.csv
+.tsv
+
+# Config Files
+.config
+.ini
+.cfg
+.properties
+.env
+.gitignore
+.dockerignore
+.editorconfig
+
+# Documentation
+.txt
+.doc
+.docx
+.pdf
+.rtf
+.odt
+.ppt
+.pptx
+
+# Data Files
+.sql
+.db
+.sqlite
+.csv
+.xls
+.xlsx
+
+# Build & Project Files
+.csproj
+.vbproj
+.fsproj
+.cake
+.makefile
+.dockerfile
+.gitattributes
+
+# Other Text Formats
+.log
+.diff
+.patch
+.license
+.readme
+.changelog
+.releasenotes
