@@ -30,36 +30,26 @@ public class Work
 
     public static void GetAllDirsAndFiles(string dirName, string methodSetting, string isIgnoreDirecoryName)
     {
-        
         var directory = new DirectoryInfo(dirName);
         
         if (directory.Exists)
         {
             Console.WriteLine("Подкаталоги:");
             DirectoryInfo[] dirs = directory.GetDirectories();
+            
+            // ВСЕГДА обрабатываем все папки рекурсивно
             foreach (DirectoryInfo dir in dirs)
             {
-                if (methodSetting.Equals("Consider"))
-                {
-                    if (IsAllow(dir.FullName, "Consider.txt"))
-                    {
-                        Console.WriteLine(dir.FullName);
-                        GetAllDirsAndFiles(dir.FullName, methodSetting, isIgnoreDirecoryName);
-                    }
-                }
-                if (methodSetting.Equals("Ignore"))
-                {
-                    if (!IsAllow(dir.FullName, "Ignore.txt"))
-                    {
-                        Console.WriteLine(dir.FullName);
-                        GetAllDirsAndFiles(dir.FullName, methodSetting, isIgnoreDirecoryName);
-                    }
-                }
+                Console.WriteLine(dir.FullName);
+                GetAllDirsAndFiles(dir.FullName, methodSetting, isIgnoreDirecoryName);
             }
+            
             Console.WriteLine();
 
             Console.WriteLine("Файлы:");
             FileInfo[] files = directory.GetFiles();
+            
+            // А вот файлы фильтруем по настройкам
             foreach (FileInfo file in files)
             {
                 if (methodSetting.Equals("Consider"))
@@ -70,8 +60,7 @@ public class Work
                         GetAndWriteTextFromFile(file.FullName, isIgnoreDirecoryName);
                     }
                 }
-
-                if (methodSetting.Equals("Ignore"))
+                else if (methodSetting.Equals("Ignore"))
                 {
                     if (!IsAllow(file.FullName, "Ignore.txt"))
                     {

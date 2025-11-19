@@ -9,6 +9,7 @@ public class StartProgram
 
         while (isProcessing)
         {
+            Console.WriteLine();
             Console.WriteLine("1. Start work");
             Console.WriteLine("2. Open Settings file");
             Console.WriteLine("3. Open Consider list file");

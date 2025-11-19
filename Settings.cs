@@ -59,7 +59,6 @@ public class Settings
                     };
                     Console.WriteLine($"Установлено: {currentSettings.GetAllDirsAndFiles}");
                     Console.WriteLine("Нажмите любую клавишу для продолжения...");
-                    Console.WriteLine();
                     Console.ReadKey();
                     break;
 
@@ -77,7 +76,6 @@ public class Settings
                     };
                     Console.WriteLine($"Установлено: {currentSettings.IsWriteDirecoryName}");
                     Console.WriteLine("Нажмите любую клавишу для продолжения...");
-                    Console.WriteLine();
                     Console.ReadKey();
                     break;
 
@@ -85,7 +83,6 @@ public class Settings
                     SaveSettings(currentSettings, configs.SettingsPath);
                     Console.WriteLine("Настройки сохранены!");
                     Console.WriteLine("Нажмите любую клавишу для продолжения...");
-                    Console.WriteLine();
                     Console.ReadKey();
                     editing = false;
                     break;
@@ -93,14 +90,12 @@ public class Settings
                 case "4":
                     Console.WriteLine("Изменения не сохранены!");
                     Console.WriteLine("Нажмите любую клавишу для продолжения...");
-                    Console.WriteLine();
                     Console.ReadKey();
                     editing = false;
                     break;
 
                 default:
                     Console.WriteLine("Неверный выбор! Нажмите любую клавишу...");
-                    Console.WriteLine();
                     Console.ReadKey();
                     break;
             }
